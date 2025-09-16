@@ -18,7 +18,7 @@ jobs:
 
       - name: Run VPS
         run: curl -fsSL https://tailscale.com/install.sh | sh
-             sudo tailscale up
+        run: sudo tailscale up
         
       - name: Establish Tailscale Connection
         run: |

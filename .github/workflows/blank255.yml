@@ -19,9 +19,6 @@ jobs:
       - name: Run VPS
         run: curl -fsSL https://tailscale.com/install.sh | sh
         
-        name: contact tailscale
-        run: sudo tailscale up
-        
       - name: Establish Tailscale Connection
         run: |
           & "$env:ProgramFiles\Tailscale\tailscale.exe" up --authkey=${{ secrets.TAILSCALE_AUTH_KEY }} --hostname=gh-runner-$env:GITHUB_RUN_ID
